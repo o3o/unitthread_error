@@ -1,0 +1,20 @@
+name "script"
+
+configuration "ut_def" {
+}
+
+configuration "unittest" {
+   targetName "ut"
+   dependency "unit-threaded" version="*"
+   sourcePaths "tests"
+   mainSourceFile "tests/ut/main.d"
+   targetType "executable"
+   }
+
+configuration "integration" {
+   targetName "it"
+   dependency "unit-threaded" version="*"
+   sourcePaths "tests"
+   mainSourceFile "tests/ut/main.d"
+   targetType "executable"
+}
